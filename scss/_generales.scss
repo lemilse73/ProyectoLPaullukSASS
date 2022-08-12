@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+h1{
+    font-family: $font-family;
+}
+
+h3{
+    font-family: $font-family;
+}
+
+p{
+    font-family: $font-family;
+}
+
+
+#tarjeta_img{
+    width: 40%;
+    height: 50%;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+  
+.color{
+        background-color: $base-tarjeta;
+        
+}
+        
+.color:hover{
+       background-color: $base-tarjeta1;
+       color: $base-tarjeta3;
+}  
+  
+  
+.color1{
+    background-color: $base-tarjeta;
+    
+}
+    
+.color1:hover{
+   background-color:$base-tarjeta2;
+   color: $base-tarjeta3;
+}  
