@@ -1,0 +1,81 @@
+
+    .tarjeta{
+        width: 80%;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        display: flex;
+        flex-direction:column;
+        justify-self: center;
+        @media only screen and ( max-width:600px){
+            height: 100%;
+             }
+         @media only screen and ( min-width:600px){
+            height: 80%;
+             }  
+        &__img{
+            display: flex;
+            justify-self: center;
+            align-self: center;
+            @media only screen and ( max-width:600px){
+                width: 50%;
+                height: 60%;
+                 }
+             @media only screen and ( min-width:600px){
+                width: 70%;
+                height: 50%;
+                 }
+            }   
+        &__h3{
+            display: flex;
+            text-justify: center; 
+            align-items: center;
+            justify-content: center;
+            @media only screen and ( max-width:600px){
+               font-size:16px;
+                }
+            @media only screen and ( min-width:600px){
+                font-size:30px;
+                }
+            }   
+        &__p{
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            @media only screen and ( max-width:600px){
+                font-size:12px;
+                 }
+             @media only screen and ( min-width:600px){
+                 font-size:15px;
+                 }
+             }       
+         }
+
+
+    .tarjeta1{
+        @extend .tarjeta;
+            @media only screen and ( max-width:600px){
+                align-self:flex-end;
+            }   
+             @media only screen and ( min-width:600px){
+                 align-self: center;
+            }   
+    }
+        
+    .tarjeta2{
+        @extend .tarjeta;
+        @media only screen and ( max-width:600px){
+            align-self:flex-end;
+        }   
+         @media only screen and ( min-width:600px){
+             align-self: center;
+        }   
+    }
+
+    .tarjeta3{
+        @extend .tarjeta;
+        @media only screen and ( max-width:600px){
+            align-self:flex-end;
+        }   
+         @media only screen and ( min-width:600px){
+             align-self: center;
+        }   
+    }

@@ -1,0 +1,32 @@
+$verde-claro:  rgb(202, 232, 191);
+$azul-oscuro: rgb(79, 51, 161);
+$verde-oscuro: rgb(5, 86, 81);
+$azul-claro: rgb(149, 214, 247);
+$celeste-oscuro: rgb(74, 183, 237);
+$celeste-militar: rgb(17, 78, 109);
+
+body{
+    @media only screen and ( max-width:600px){
+        background-image:linear-gradient($celeste-oscuro, $verde-claro);
+    }
+
+    @media only screen and ( min-width:600px){
+        background-image: linear-gradient($celeste-oscuro,$verde-claro);
+        }
+}
+
+.tarjeta_color{
+    background-color: $verde-claro;
+        &:hover{
+            background-color: $azul-oscuro;
+            color: $azul-claro;
+    }  
+}
+
+.tarjeta_color1{
+    background-color: $verde-claro;
+        &:hover{
+            background-color:$verde-oscuro;
+            color: $azul-claro;
+    } 
+} 

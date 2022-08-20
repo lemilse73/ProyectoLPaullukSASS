@@ -1,0 +1,46 @@
+.main_texto{			
+    height: 100px;			
+    width: 100%;			
+    display: flex;	
+}		
+.main_texto_center{			
+    text-justify: center;			
+    align-items: center;			
+    justify-content: center;
+}			
+    
+.main_titulo_h1{
+    @extend .main_texto;
+    @extend .main_texto_center;
+    @media only screen and ( max-width:600px){
+        text-align:center;
+         }
+    }
+
+.main_titulo_h2{
+    @extend .main_texto;
+    @extend .main_texto_center;
+    }  
+
+@mixin main_titulo_p($justify){
+        justify-content:$justify;
+        flex-direction: column;
+        text-align: center;
+    }    
+
+.main_titulo_p{
+        @extend .main_texto;
+        @media only screen and ( max-width:600px){
+            @include main_titulo_p(end);
+            }
+        @media only screen and ( min-width:600px){
+            @include main_titulo_p(center);
+        }
+     }  
+      
+.main_img{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}

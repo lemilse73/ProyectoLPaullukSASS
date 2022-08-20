@@ -1,43 +1,45 @@
+@mixin a ($color,$size){
+	color:$color;
+	font-size:$size;
+    text-decoration: none;
+    font-family: $font-family;
+}
 
+.navbar{
+    justify-content: space-between;
+}
 header{
     position: sticky;
     top:0px;
     justify-content: space-between;
-
-    a{
-        text-decoration: none;
-        font-family: $font-family;
-        font-weight: 800;
-        color: $base-tarjeta3;
-    }
     img{   
         width: 60px;
         height: 60px;
         border-width:4px;
         border-style:groove;
-        border-color:$base-tarjeta3;
-          
-        &:circular--square {
-            border-radius: 50%;
-            }
-    }
-
-            
-    .zoom{
+        border-color:$azul-claro;
+        border-radius: 50%;
         transition: transform .2s; 
+        &:hover{
+            transform: scale(1.5); 
+        }
     }
-        
-    .zoom:hover{
-        transform: scale(1.3); 
-    }
-
 }
+
+.nav-color{
+    @include a($azul-claro,800);
+    margin-left: 30px;
+    transition: transform .2s; 
+        &:hover{
+            transform: scale(1.5); 
+            color: $azul-claro;
+        }
+ }
 
 
 footer{
-    background-color: $footer-color;
+    background-color: $celeste-militar;
     height: 100%;
-    
     ul{
         display: flex;
         flex-wrap: nowrap;
@@ -45,12 +47,11 @@ footer{
         justify-content: space-around;
         align-items: center;
     }
-
     a{
-        font-family: $font-family;
+        @include a($azul-claro,800);
        
-        }
-    }
-
-
+     }
+   }
+    
+    
 

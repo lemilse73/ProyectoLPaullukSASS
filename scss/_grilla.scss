@@ -1,14 +1,13 @@
+
 #grilla{
     display: grid;
 }
 
+
 /*SM XS*/
 @media only screen and ( max-width:600px){
 
-    body{
-        background-image:linear-gradient($body-color, $body-color1);
-    
-    }  
+   
     #grilla{
 
         display:grid;
@@ -17,15 +16,12 @@
         grid-template-areas:"header"
                             "main"
                             "footer";
-
     }
-
-   
 
     main{
         display:grid;
         grid-template-columns: 90%;
-        grid-template-rows: 10% 5% 30% 5% 15% 15% 15%;
+        grid-template-rows: 6% 11% 25% 7% 15% 15% 15%;
         grid-template-areas: "m7"
                              "m1"
                              "m2"
@@ -40,112 +36,35 @@
 
     .main_titulo_h1{
         grid-area:m7;
-        height: 100px;
-        width: 100%;
-        display: flex;
-        text-justify: center;
-        align-items: center;
-        justify-content: center;
-        font-size:18px;
-        text-align:center;
-       
-      
     }
     
     .main_titulo_h2{
         grid-area:m8;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        text-justify: center;
-        align-items: center;
-        font-size:12px;
-        justify-content: center;
-      
     }
+
     .main_titulo_p{
         grid-area:m1;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content:end;
-        flex-direction: column;
-        font-size:15px;
-        text-align: center;
-       
     }
-        
-
 
     .main_img{
         grid-area:m2;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-content: center;
     }
     
-   
-
     .tarjeta1{
         grid-area:m4;
-        height: 80%;
-        width: 80%;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-        display: flex;
-        flex-direction:column;
-        justify-self: center;
-        align-self:flex-end;
     }
      
     .tarjeta2{
         grid-area:m5;
-        height: 80%;
-        width: 80%;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-        display: flex;
-        flex-direction:column;
-        justify-self: center;
-        align-self: flex-end;
     }
 
     .tarjeta3{
         grid-area:m6;
-        height: 80%;
-        width: 80%;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-        display: flex;
-        flex-direction:column;
-        justify-self: center;
-        align-self: flex-end;
     }
-    
-    
-   
-
-    .tarjeta_h3{
-        display: flex;
-        text-justify: center;
-        align-items:flex-end;
-        justify-content: center;
-        font-size:15px;
-        
-    }
-
-    .tarjeta_p{
-        align-items: center;
-        justify-content: center;
-        font-size:10px;
-        text-align: center;
-     
-    }
-
+       
     footer{
         grid-area:footer;
-             
     }
-
-
 }
 /*MD*/
 
@@ -154,11 +73,7 @@
 
 @media only screen and ( min-width:600px){
 
-    body{
-        background-image: linear-gradient($body-color,$body-color1);
        
-    }
-    
     #grilla{
 
         display:grid;
@@ -187,104 +102,33 @@
 
     .main_titulo_h1{
         grid-area:m7;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        text-justify: center;
-        align-items: center;
-        justify-content: center;
-      
     }
     
     .main_titulo_h2{
         grid-area:m8;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        text-justify: center;
-        align-items: center;
-        justify-content: center;
-      
     }
     .main_titulo_p{
         grid-area:m1;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content:center;
-        flex-direction: column;
-        font-size:18px;
-        text-align: center;
-       
     }
-        
-
 
     .main_img{
         grid-area:m2;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-content: center;
     }
-    
+
     .tarjeta1{
         grid-area:m4;
-        height: 80%;
-        width: 80%;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-        display: flex;
-        flex-direction:column;
-        justify-self: center;
-        align-self: center;
-    }   
+     }   
         
-     
-      
     .tarjeta2{
         grid-area:m5;
-        height: 80%;
-        width: 80%;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-        display: flex;
-        flex-direction:column;
-        justify-self: center;
-        align-self: center;
     }
 
     .tarjeta3{
         grid-area:m6;
-        height: 80%;
-        width: 80%;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-        display: flex;
-        flex-direction:column;
-        justify-self: center;
-        align-self: center;
-       
-    }
-    
-          
-
-    .tarjeta_h3{
-        display: flex;
-        text-justify: center;
-        align-items: center;
-        justify-content: center;
-    
     }
 
-    .tarjeta_p{
-        align-items: center;
-        justify-content: center;
-        font-size:18px;
-        text-align: center;
-       
-    }
     footer{
         grid-area:footer;
-       
-      
     }
 
   
