@@ -4,6 +4,13 @@ $verde-oscuro: rgb(5, 86, 81);
 $azul-claro: rgb(149, 214, 247);
 $celeste-oscuro: rgb(74, 183, 237);
 $celeste-militar: rgb(17, 78, 109);
+$verde: rgba(28, 244, 179, 0.719);
+$azul: rgb(64, 51, 139);
+$violeta:rgb(244, 184, 232);
+$rosa:rgb(234, 149, 218);
+$rojo:rgb(238, 171, 171);
+$naranja:rgba(245, 96, 62, 0.719);
+
 
 body{
     @media only screen and ( max-width:600px){
@@ -30,3 +37,41 @@ body{
             color: $azul-claro;
     } 
 } 
+
+.body_contacto{
+    @media only screen and ( max-width:600px){
+        background-image: linear-gradient($celeste-oscuro,$verde);
+    }  
+    @media only screen and ( min-width:600px){
+        background-image: linear-gradient($celeste-oscuro,$verde-oscuro);
+    }  
+}
+
+.body_imagenes{
+    @media only screen and ( max-width:600px){
+        background-image:linear-gradient($celeste-oscuro, $azul);
+    } 
+    @media only screen and ( min-width:600px){
+        background-image: linear-gradient($celeste-oscuro,$celeste-militar);
+    }
+}
+
+.body_ubicacion{
+    @media only screen and ( max-width:600px){
+        background-image:linear-gradient($celeste-oscuro, $violeta);
+    } 
+    @media only screen and ( min-width:600px){
+        background-image: linear-gradient($celeste-oscuro,$rosa)
+    } 
+}
+
+.body_tipos{
+    @media only screen and ( max-width:600px){
+        background-image:linear-gradient($celeste-oscuro, $rojo);
+    }
+    @media only screen and ( min-width:600px){
+        background-image: linear-gradient($celeste-oscuro,$naranja);
+    }  
+}
+
+

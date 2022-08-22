@@ -1,46 +1,238 @@
-.main_texto{			
-    height: 100px;			
-    width: 100%;			
+@mixin main_texto($width,$heigth){			
+    width: $width;
+    height: $heigth;			
     display: flex;	
 }		
-.main_texto_center{			
+@mixin main_texto_align($align){			
     text-justify: center;			
-    align-items: center;			
+    align-items: $align;			
     justify-content: center;
 }			
     
 .main_titulo_h1{
-    @extend .main_texto;
-    @extend .main_texto_center;
+    @include main_texto(100%,100%);
+    @include main_texto_align(center);
     @media only screen and ( max-width:600px){
         text-align:center;
-         }
-    }
+        }
+}
+   
+.main_titulo_h1_contacto{
+    @include main_texto(100%, 100%);
+    @include main_texto_align(flex-start);
+}
+
+   
+.main_titulo_h1_ubicacion{
+    @include main_texto(100%, 100%);
+    @include main_texto_align(flex-end);
+}
+  
+.main_titulo_h1_tipos{
+    @include main_texto(100%, 80%);
+    @media only screen and ( max-width:600px){
+        @include main_texto_align(flex-end);
+        }
+    @media only screen and ( min-width:600px){
+        @include main_texto_align(flex-start);
+        }
+}
+ 
+.main_titulo_h1_imagenes{
+    @media only screen and ( max-width:600px){
+        @include main_texto(100%, 100%);
+        justify-content: center;
+        align-items: flex-end;
+        text-justify: center;
+        }
+    @media only screen and ( min-width:600px){
+        @include main_texto(100%, 100%);
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: row;
+        margin-top: 20px;
+        }
+}
 
 .main_titulo_h2{
-    @extend .main_texto;
-    @extend .main_texto_center;
+    @include main_texto(100%, 100%);
+    @include main_texto_align(center);
     }  
 
-@mixin main_titulo_p($justify){
+@mixin main_titulo_p($justify, $direction){
         justify-content:$justify;
-        flex-direction: column;
+        flex-direction:$direction;
         text-align: center;
-    }    
+    }  
+
+.main_titulo_h3_tipos{
+    @include main_texto(100%, 100%);
+    @media only screen and ( max-width:600px){
+        @include main_titulo_p(center, column);
+        }
+    @media only screen and ( min-width:600px){
+        @include main_titulo_p(center, column);
+        }
+    }  
 
 .main_titulo_p{
-        @extend .main_texto;
-        @media only screen and ( max-width:600px){
-            @include main_titulo_p(end);
-            }
-        @media only screen and ( min-width:600px){
-            @include main_titulo_p(center);
+    @include main_texto(100%, 100%);
+    @media only screen and ( max-width:600px){
+        @include main_titulo_p(end, column);
+        }
+    @media only screen and ( min-width:600px){
+        @include main_titulo_p(center, column);
         }
      }  
-      
-.main_img{
-    height: 100%;
+
+.main_titulo_p_contacto{
+    @include main_texto(100%, 100%);
+    @media only screen and ( max-width:600px){
+        @include main_titulo_p(center, row);
+        }
+    @media only screen and ( min-width:600px){
+        @include main_titulo_p(center, row);
+        }
+     }  
+.main_titulo_p_ubicacion{
+    @include main_texto(100%, 100%);
+    @media only screen and ( max-width:600px){
+        @include main_titulo_p(center, column);
+        text-align: center;
+        }
+    @media only screen and ( min-width:600px){
+        @include main_titulo_p(center, row);
+        align-items: center;
+        }
+    }  
+
+.main_titulo_p_imagenes{
+    @media only screen and ( max-width:600px){
+        @include main_texto(100%, 100%);
+        @include main_titulo_p(center, row);
+        text-align: center;
+    }
+    @media only screen and ( min-width:600px){
+        @include main_texto(100%, 100%);
+        @include main_titulo_p(center, row);
+        align-items: center;
+        }
+}  
+
+.main_titulo_p1_tipos{
+    @include main_texto(50%, 50%);
+    @media only screen and ( max-width:600px){
+        @include main_titulo_p(center,none);
+        }
+    @media only screen and ( min-width:600px){
+        @include main_titulo_p(center,none);
+        margin-left: 80px;
+        }
+    }  
+
+.main_titulo_p2_tipos{
+    @extend .main_titulo_p1_tipos;
+    }
+
+@mixin main_img($ancho, $alto){
+    width:$ancho;
+    height:$alto;
     display: flex;
     justify-content: center;
     align-content: center;
+}    
+
+
+.main_img{
+    @include main_img(100% , 100%);
+}
+
+.main_img_ubicacion{
+    @media only screen and ( max-width:600px){
+        @include main_img(100% , 80%);
+        }
+    @media only screen and ( min-width:600px){
+        @include main_img(100% , 100%);
+        }
+}
+
+.main_img_tipos{
+    @media only screen and ( max-width:600px){
+        @include main_img(250px, 70px);
+        }
+    @media only screen and ( min-width:600px){
+        @include main_img(300px, 110px);
+        }
+}
+
+.img_tipos_contacto{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+      }
+
+   
+.img1{   
+    @media only screen and ( max-width:600px){
+        width: 400px;
+        height: 250px;
+    }
+    @media only screen and ( min-width:600px){    
+        width: 900px;
+        height: 350px;
+    }
+    }
+ 
+.main_detalle_ubicacion{
+    @include main_texto(100%, 100%);
+    @include main_texto_align(flex-start);
+    }  
+  
+.main_detalle_tipos{  
+    @media only screen and ( max-width:600px){
+        @include main_texto(80%, 80%);
+        justify-self: center;
+        align-items: center;
+    }
+    @media only screen and ( min-width:600px){
+        @include main_texto(100%, 100%);
+        justify-content: right;
+        align-items: center;
+        flex-direction: row;
+    }
+ }  
+input{
+    float: left;
+} 
+
+.main_temporada_1_tipos{
+    height: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main_temporada_2_tipos{
+    @extend .main_temporada_1_tipos;
+}
+
+.main_contacto_tipos{
+    @media only screen and ( max-width:600px){
+        @include main_img(100%, 100%);
+        justify-content: center;
+        align-self: center;
+        }
+    @media only screen and ( min-width:600px){
+        @include main_img(100%, 100%);
+        justify-content: left;
+        align-items:center;
+        margin-left: 30px;
+        }
+}
+     
+.carousel{
+    display: flex;
+    justify-content: center;
+    align-content:center;
 }
